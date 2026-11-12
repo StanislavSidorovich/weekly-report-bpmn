@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Progress Report BPMN</title>
+<meta name="description" content="A BPMN AS-IS model of a weekly progress report on an industrial construction project, open it interactively in Quaera Flow.">
+<meta property="og:title" content="Weekly progress report: AS-IS in BPMN">
+<meta property="og:description" content="Open the full model in Quaera Flow: zoom, pan, click any element.">
+<meta property="og:image" content="model.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#1d2433;--muted:#566074;--bg:#ffffff;--card:#f2f4f8;--line:#d9dee7;--accent:#2563eb;--accent-ink:#fff;
+        --z1:#2f7de1;--z2:#e08a1e;--z3:#7a4fd6;--z4:#1f9d6b}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){--ink:#e6e9ef;--muted:#a3abba;--bg:#14171d;--card:#1e232c;--line:#2e3542;--accent:#4f8ef7}
+  }
+  :root[data-theme="dark"]{--ink:#e6e9ef;--muted:#a3abba;--bg:#14171d;--card:#1e232c;--line:#2e3542;--accent:#4f8ef7}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "IBM Plex Sans",system-ui,sans-serif}
+  main{max-width:880px;margin:0 auto;padding:48px 16px 64px}
+  .kicker{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  h1{font-size:clamp(28px,5vw,42px);line-height:1.12;margin:10px 0 0}
+  .lead{font-size:19px;color:var(--muted);margin:14px 0 0;max-width:42rem}
+  .go{display:inline-flex;align-items:center;gap:10px;margin:28px 0 8px;padding:16px 26px;border-radius:12px;background:var(--accent);
+      color:var(--accent-ink);font-weight:600;font-size:19px;text-decoration:none}
+  .go:hover{filter:brightness(1.08)}
+  .hint{font-size:14px;color:var(--muted);margin:0}
+  figure{margin:36px 0 0}
+  figure a{display:block;border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px var(--line);background:#fff}
+  figure img{display:block;width:100%;height:auto}
+  figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+  h2{font-size:22px;margin:44px 0 12px}
+  .zones{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;padding:0;margin:0;list-style:none}
+  .zones li{background:var(--card);border-radius:12px;padding:14px 16px;border-top:5px solid}
+  .zones b{display:block}
+  .zones span{font-size:15px;color:var(--muted)}
+  ul.plain{padding-left:20px;margin:0}
+  ul.plain li{margin:6px 0}
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+  footer a{color:inherit}
+</style>
+</head>
+<body>
+<main>
+  <div class="kicker">Learning BPM · NOVA IMS</div>
+  <h1>Weekly progress report: AS-IS in BPMN</h1>
+  <p class="lead">A process I know from my work as a Planning &amp; Reporting Engineer on an industrial construction project, modelled from memory while studying Business Process Management. This model covers the reporting side of the role.</p>
+
+  <a class="go" href="https://flow.quaera.app/#share=zVxbb9w2Fv4rwgC7SLFOVryTflmkbboN0LRFkzZYLIKFMkPbgmdGXkljxwjy30tJJEXdac1omj6kNmfOhed858JDJp9X96tLcLG6jfeb1eVql2zkdnWh_3_5eXWVpLsoV59keRrl0fOrbfKgPr-XaRYn-5J0H-2k-sJ7KW-3j8FdmlynMsuCVN4laR48e_n2-eu33yiauyjN43V8F-3zbHX538-ruJD4a736P7Cy3H552Ms0eJbFuQxyGe1KBmmyVpxfl2TVz4rky0UPJ1hz-i7ZK9XXeZIOsID9LFDN4kcZbYJfrq7itRzggVZfPlysttFeOlv7Sf3q7ulX9fk-3l8Hfw9-K41T_Pxqfx3vpUybBnrdNY1VsmTrbjC-j7eBnMfH2eWrrVznabyOZjPDNbM3cn0T7Utm_wx-_OPld3N5koYnFQoP61whL9hF--jah5vyy16h2fHLuyi7df3ym_z_QWZ5sFEAD67SZBesk-1WRtdqVX0rf7wrvpUrqpUNFP3buOwKEa8dLNi9vbqXTcCrhfQxeJPsN9FjLVQWXyvkJCoSyoBTgahkFN9I4-vCAEqXeFcaIr9JkweFqdXlVbTN5BHalRZyIPY-2t4G-Y0Mynh8iPObYN1G3SJmKhVxMPrrYbsN9ofdR5V_gnifJ0GylzrVLKoDdmG4U7y0GUqjrG_k5rCVSynw7yiXD9Gji5Zv5Y3i3ZD-r1r8dUVQayA_rbeHLL6XR9vBCceX2W1QJ9dAVQrliChTQbqoJ1itwVupbKDrjIJCnRIWdYMTF2cxOXfiMC3iLzvsdlH6uKiVRS30j1hFfRn5J5UIWxJB6Gbk0qe2l_jbUpKNT5GXT5WYSBWG7SlQhM8msbKukzxebjYmUouwOUP2BND17X0sH4JIhe6VlJuP0fr2pLJJWzZyZWfJ9r4oGCqAbjNdyRYv9sbnxNXkIUlvA1U7N3KzTOruGMKB3O93qtk5TyYB1CnfaXIfb6Qy-W4ni2PAogmFnUkwagvmZxKMuxBjZ09k_OwSxZkLMFi-GLYhBM9WDDuSweKbxW2R8Fybxe0DmFMb3suNOr2r01fw6pfvR09gH5ODOqVVaXP6EKZOKTJND3e5uxjleVT07e-SRvtzXMKDjUq3Kw4IS5_PKivitlyZBllltmErqt69YcC9Osk17KeO-vJo1chX42AYHhOb1W7o17MbeIpq5fb8S6dyKxP4ySwM-W2Uyc3x8cH6ppFF3719VH-updrZZtSFpVN2chNHVSq2btypHKnOvCcd_lQ6O2X9Z_kpD4p2tZhXTo2nBlVdakrlTmZulL9Uq-UMfBfJei_3-ySPig27M5k3av9WYGS_0kvmVLx3B_n8vev_CVInyb-7OYyTVRYirYnJVbyPts7cpDneXtpijr9-SONx_Ssoik57sJFbFTOp3Ayq_xcUHJtgzjgg0mPksIGJtCwL-8TF44nrQmWqU3cxejfga9nNKUq2i4a_eDfw-E6duqF4UMl2G2W5SijXh1ReBFfbSKm6WXwO3p3obNqjnPNMwyFrjsPr0lMkpvU2SuOrx4WvkFAPvgpEFVj4qgq101H8numrpDMhR5sK9_ZhlZvidVl7vsJ-zMK-X_1NnN0dcpnZM_OZoO9U5e_jbH3I9Dj1PFeCjfnIc5Xo1reB8l4JqmfxlR6sfrN4KnJ6q5-i9FoG0U6l7vw8PkBOpfxeros5o7KBBsTGAmKp8bo1QnPCa55_3MfZUqPtjiFgZ7RtJ0jxfuEbDmsG9hccZp2k-l2q0lPx4KK8WVAtcvSoQFBcy8J_BA9S3p4pMyDUvGrSo-9Sk-qKtvz12U7K8gWMWlC9zvKheoax8YeLVfFAynlr8oP6tfyuZp8Vb0325UklSw7pWjbeguRFCsl7nqjU2ykZ4nGG9tVEk1_ryrH87K1KGur3rbzKWzKIhwzsyuh5ptBiScdZugyamjtZ9j_VNZ2r_Mckz5NdS1bZF3kIgx1hfFB_gGdsoOfZwM9JmzHzMLboAiTsU_VN1YO0kVe3Jk22xGU78Iaura7wULfXCGiQZ3nW8rBtF9bDekIwl6cY5gn9eOIOz5G9Iw97wj574mGePvFLeuN3xKDUx_FT8O-HKhyFahuYln9nwtrODnly196FD3xZN9qac53q62MpCIU-1ur1Kxl0AfLENOnqj5pZtFVSfDDI-3QdjhXsmS-7mY0N8_TBNcBPVNQn_wLUx3REU-63-x6k0WGmYjbTYU1JOJvpcLEkwMemtM-mI0yhD1P2RKY-0Af8iUy9cNpFPgyHWfpkX9jtnuBwQidsboVstdN92dCjx-Sziz44hXifQlA6ZLTwtsSn8fVN7tWjUp8CAeFy8r2iacH9e_U9qFvuh9sein3OWr2ZvHUZPXdPxEcBsqAC1EcBuqACnjmlCazOC5a2AmX8esn3TCrNPrXbR7a4Ch-z9lYeMAxXFs7XlT_RWd1GmHkNJnjXTXi83fZpjplP7oF48oDigZLKGvVddJYl67i-vtdKRPXy-Fm2__a_rUhlh1G0uopAP0XggCLwKEUqh6AZB4u-OWRnusF8xlWQdBEunojwZol3D5dkeg4CBwch6KmtRiPSXC9jTy-TATfjE7iZeGac3rYDTCC-JcurFPXVAXqKQsSYl3iwlHjuJR4uJd6ruaVPbO56YNbTWHPPstZ7pgLoqLCvFPCckoCegw1uD5tnOoDD2Tq47wpUOp2jgpv9qEf2Yz5j4MmI52h-PwOOy7OVfK_2v8_i_ATCfY78kE9NR2ecZt0aQ_xqDBsoMeioEuOijh0z0AX4KRNd7jUZYZNi5uUavzKDRzPNbOG-h53-TpqNtG1czGHdeRzSk0N9A0p4zUe6MzQUHh_Mwmd8iXpnI-6jkNnifYtHfzsunlw_erAl0BwdOi9TjgGA74Ur7WoAn17G-2xA5mgwEF8zW3bhe2_eM58fvowXPnceCE5ta_amuI94MIXu-e2Z8E1vPfMPcorwAiGYrQEavcsDoc9wBaHRjc3r_EHomzREr2sbN18fLlabOLpOo13xTxFlN9Fd8c-4fDYzGfXTp9Xlc8DoxepxdYmQuFg9xJv8ZnUJwvBidSNLT1zy8MuFfWSjiSAGFRENLRGiNQ2iikaPXCoSoqXgmgBA0pKiL_o1RaGEIiEAjCimH9JUJLTgOElSvzOpqBjVVJBaKuIQESuHGApcqYZCOCKn-d5JWw5BXpJCR0VEoKhpAWDACGSaDHBudoY9dmaMDgjDnlvjhoQaawDkuTfY3tvz8vu9m4O1RGHIKCypKMFTfgah0RKwLg0ELRr9rsxgVvRYHgtHOQy4oYJtKgrFABWgzDE9ssaoAI8JGLZ8PTGoiHBYCcMUTLgLAOtiLKptITJiPv23K1qbYoIObooYKtymEnTIgLCMe_3QtUUFgGBDwjix-4I14qsYAxDxSVyYncEQVOjFmHrECbFkiGhhBE5Z3tgDUlIBFxE4qSA1RBBXkiibJmJtIo6mQ4S3iQQXHqYoo7F34xeVO0KTJLlDxcapICChAbRDxSeokIZ0Jcvcl2s8sarycCimTAHrbEG6NBD30th0wTT8whBNCoItQU2iTpkzt6iaCFY5mgEyVUsNCUaVVQWfLNnYxhPVNh2p2OZ2VZOgygTcAdAACbV7QdoAlA7TOFeYGqtMg4uR6WRpU59AOqGTcJjKXCxq_UKONA2b2pMJJCGI7nXYlH-MsQXVyZ8OBDkuSkbjJsx2YxpBjn4NynJTjasr3foITUf96FCdZ6mmRCOUzQudVr0HSMDBZqa2js22wmQFMIbfxsWNocRV3QdO39lV1lx_VUQImKqKQw9MGoNyUolCgE2hq8axbktYOBlkFsWGhtPJKLO6QaANH2I6hUkTmghCnQAGMEkbQWYrKoag0w_2V0Zo6xXWCQoNuYmKelMWiQDoQwWfPFTYbjVkQrdZQ_ECa0kWRqYtRgx7IMKmUKgVHE04ZqpmNsXN8WrAFBjZg0_YIRIDMUmRqyBpK4jFVP-IQFsWgJD4HJpsqi8PjKXp-ZQwWx-xocHIR5ZN25jiacs7B35TVgzmp1W0eOe6FSTYiZNCXasidGVZR0NzQqODNUzRyc11dQg3jzyLv-pS9TxEdwGwGAmUSwwPLRHGi-O9edTZZsIZblP0LDWYoA4TEELRJulbc9lgYtmw0HbHhsIuhWYJcBQOLRXdn-FLWc1X989hqAkE6l_QejUfEGguKAxtCdJUdgkCwwgKweySVcUyKYtQ4R-EjO5mhcEX6sAYAlUZeYgYqWV4fU4hqeWRWl4VqSJkVp5eIfgFJiEMCSTq_E55i9_U5w151MojuqcIucGOXVKN3gsUqn2EnHNMmWhxnPyCK5Jb8AmqC0ftTLNCzIpiLQaXeO0oYeMCQGpqGDUUqisYXKK1aoLXTGyipKRN0rdGQc2mmOsZPsgkGGHVRzq99S2FdRQwmy5ACPQRILTYCwEdXKKw3pGoQ4np9MgNBeQQvGCCCaKKMVUnSOT3BVUDbMyY5o7UivM6z2F9fiPIUlCGX9BQARMLBjiD1O8LGHUSS7H04Yv6708">Open the interactive model ↗</a>
+  <p class="hint">Opens in Quaera Flow, a free browser app for BPMN practice. Zoom, pan, click any element. Nothing to install; works best on a laptop or tablet.</p>
+
+  <figure>
+    <a href="model.png" target="_blank" rel="noopener"><img src="model.png" alt="The full BPMN model of the weekly progress report: pools for the contractor, the site team and the head office; lanes for the planning engineer, three discipline engineers and the construction manager." width="6000" height="2792"></a>
+    <figcaption>The whole week on one page. Click the picture for full size.</figcaption>
+  </figure>
+
+  <h2>Four parts, Monday to Friday</h2>
+  <ul class="zones">
+    <li style="border-color:var(--z1)"><b>1 · Mon–Wed</b><span>Progress is collected in parallel: three discipline engineers and a site walk. Reminder on Wednesday, cut-off Thursday noon.</span></li>
+    <li style="border-color:var(--z2)"><b>2 · Behind schedule</b><span>Ask the contractor for reasons; disputed numbers are discussed and re-checked on site.</span></li>
+    <li style="border-color:var(--z3)"><b>3 · Thursday</b><span>Summary, review by the construction manager, remarks closed with colleagues first.</span></li>
+    <li style="border-color:var(--z4)"><b>4 · Friday</b><span>Final report to head office; delays of 2+ weeks go on the management meeting agenda.</span></li>
+  </ul>
+
+  <h2>About the model</h2>
+  <ul class="plain">
+    <li>BPMN 2.0, AS-IS: the process as it ran, including deadlines, fallback rules and exceptions.</li>
+    <li>Drawn from memory. The employer is not named; labels are simplified.</li>
+    <li>Next in the course: analysis, simulation and a TO-BE redesign.</li>
+    <li>Files: <a href="model.png">model.png</a>, <a href="weekly-report.flow.json">weekly-report.flow.json</a> (open in Quaera Flow with File → Open).</li>
+  </ul>
+
+  <footer>Modelled in <a href="https://flow.quaera.app">Quaera Flow</a>, an unofficial student project built with Claude.</footer>
+</main>
+</body>
+</html>
